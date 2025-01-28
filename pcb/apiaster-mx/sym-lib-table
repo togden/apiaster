@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "apiaster")(type "KiCad")(uri "${KIPRJMOD}/../common/apiaster.kicad_sym")(options "")(descr ""))
+)
