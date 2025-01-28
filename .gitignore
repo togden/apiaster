@@ -1,0 +1,11 @@
+__pycache__
+.venv
+apiaster-backups
+case/__pycache__
+case/src/__pycache__
+case/src/parts/__pycache__
+production/backups
+apiaster.code-workspace
+~apiaster*
+fabrication*
+fp-info-cache
