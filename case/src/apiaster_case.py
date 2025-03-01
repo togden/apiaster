@@ -328,7 +328,7 @@ def make_case(args, left_side=True):
     thumb_edges = (Pos(args.thumb_adjustment[0], -args.thumb_adjustment[1])*Pos(*thumb_origin)*Rot(
         0, 0, -args.thumb_adjustment[2])*Pos(*[-x for x in thumb_origin]) * thumb_wire).order_edges()
     if args.thumb_adjustment != (0,0,0):
-        pass
+        thumb_edges = thumb_edges[1:]
     edge_verts = (
         thumb_edges[-1].vertices()[1], main_edges[0].vertices()[0], thumb_edges[0].vertices()[
             0], main_edges[-1].vertices()[1], thumb_edges[-2].vertices()[0]
