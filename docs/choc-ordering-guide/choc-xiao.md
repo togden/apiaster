@@ -109,7 +109,7 @@ The case/pcb also allows for two different tenting options; Magsafe-style magnet
 You will *need* the following tools:
  * A soldering iron. You don't need to go *super* expensive with this, but I would avoid the incredibly cheap $2 soldering irons. That said, good quality solder is arguably more important than a good quality soldering iron. I use an older, pricier model off of Ebay. I've heard good things about the [pinecil](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/) and [this option from Aliexpress](https://www.aliexpress.com/item/1005005196528703.html). Do some shopping around and researching for this option, if you cannot obtain access to one some other way.
  * Good quality solder. The ideal solder imo would be SAC305 lead-free solder wire, but it is on the expensive side so shop around a bit - aim for no-clean, lead-free at a lower melting point. If you find lead acceptable, decent leaded solder can be found for much cheaper. If you are using only SMD components, then I recommend some 217C lead-free solder paste. I found what I believe could be a decent choice [here](https://de.aliexpress.com/item/1005006956427027.html), but you will *need* [flux](https://www.aliexpress.com/item/1005006568158452.html) to go along with it, as it doesn't have any in its core (unlike most solder wire).
-
+ * [Wire cutters](https://www.aliexpress.us/item/2251832814528613.html)
 
 The following tools are highly recommended:
  * [Switch Puller](https://www.aliexpress.com/item/1005006675061450.html) 
@@ -131,4 +131,4 @@ If you are in school or university, I would highly suggest that you check which 
 
 # Build Guide
 
-[Click here to continue with the build guide for Choc \& XIAO](../choc-build-guide/xiao-pcb.md)
+[Click here to continue with the build guide](../build-guide/pcb.md). 
