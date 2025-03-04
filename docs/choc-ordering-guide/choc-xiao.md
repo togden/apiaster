@@ -57,6 +57,8 @@ The main advantage of the coin cell is in its availability and reliability. The 
  * If you use a cable between halves then do not enable the "split keyboard" toggle
  * If you use a dongle, then both your halves will have "peripheral" levels of power consumption, and the dongle will have "central" levels of power consumption (but should be connected via USB so that's irrelevant).
 
+ I recommend the [prospector](https://github.com/carrefinho/prospector) if you want a fancy dongle, but a bare XIAO with nothing attached to it also works.
+
 **Total minimum component cost at time of writing, not including shipping, customs, tariffs, etc.:  $41.63**
 
 Obviously shipping, customs, taxes, and tariffs may still need to be considered and can vary wildly depending on your location.

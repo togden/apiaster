@@ -166,6 +166,8 @@ An alternative strategy to making sure the sockets are straight which doesn't us
 | :--: |
 | *Use your tweezers or something else to wedge the mcu up and away from the breadboard. Don't worry if the sockets come with, you want them to be on the MCU for now.* |
 
+If you are using the RP2040-Zero, you want to solder the pins and MCU to the **left half only**. Same if you are using a singular XIAO. If you have two (or more) XIAOs, add the MCU to both halves.
+
 |![solder legs](../../images/build-guide/18_sockets_2.jpg) |
 | :--: |
 | *Insert the sockets into the PCB, using the MCU as a guide, then solder them.* |
