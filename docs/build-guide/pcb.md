@@ -214,6 +214,12 @@ Insert your MCU back into the sockets. The diode leg should stick out through th
 
 If you ever need to swap the MCU, just cut the diode leg in half first. You should have *plenty* of spares.
 
+# Optional: Thumb Cluster
+
+If you want to move the thumb cluster, simply snap it off and then solder wires to the marked holes. The wires should all be parallel, no crossing between them.
+
+Make sure you solder so that the wires are on back of the PCB, the same side as the hotswap sockets. 
+
 # Finished
 
 You're essentially done now, barring the insertion of switches into the hotswap sockets. You can continue by [following the case guide](../case.md) to build your case, or proceed straight to [firmware](https://github.com/Nick-Munnich/zmk-apiaster-module) to get it up and running.
