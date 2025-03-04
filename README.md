@@ -141,3 +141,11 @@ Firmware can be found [here](https://github.com/Nick-Munnich/zmk-apiaster-module
 There are a number of people and projects which served as inspiration and motivation for this project. Thank you to Sadwitch and tompi (cheapino) for serving as initial inspiration for the concept, and again to Sadwitch for helping with various little bits. Thank you to carrefinho for letting me use some of their art. Thank you to petejohanson and bravekarma for all of their work on ZMK. Thank you to hookykb for writing the charlieplex driver, which this keyboard relies upon. Thank you to quappo for providing the inspiration for the inner key column alternative keys. Finally, thank you to sadekbaroudi and all of the lovely folks on the fingerpunch Discord. Keep being awesome.
 
 Certain images in this README were taken from the websites of manufacturers or vendors and can be taken down on request.
+
+# License
+
+This README and any images which I have the rights to are licensed under CC BY-NC-SA. Individual parts of this repo are licensed under different terms which can be found under their corresponding folders. In particular:
+
+- The hardware stuff found under `/pcb` is licensed under CERN OHL-S.
+- The contents of `/case`, in particular the source code used to generate the case, is licensed under MIT.
+- The documentation is licensed under CC BY-NC-SA.
