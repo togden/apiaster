@@ -12,7 +12,7 @@ There are a number of reasons why someone might be interested in a split, column
 Apiaster was designed with flexibility in mind, in particular:
 1. The thumb cluster can be snapped off and moved. The case is generated from a script, allowing it to be moved to most reasonable locations (as long as it doesn't collide with the rest of the PCB).
 2. The optional choice of reduced inner keys, reducing the strain on the index fingers by avoiding some particularly uncomfortable keys (B and N in a QWERTY layout).
-3. The optional choice of an alternative thumb cluster I designed, which brings the thumb keys closer together than would be possible with standard keycaps.
+3. The optional choice of an [alternative thumb cluster](https://github.com/Nick-Munnich/ripple-thumb-keycaps) I designed, which brings the thumb keys closer together than would be possible with standard keycaps.
 
 | ![Image of a rendered case with adjustments](images/rendered_adjustments.png) | 
 |:--:| 
