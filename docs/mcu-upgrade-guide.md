@@ -36,4 +36,4 @@ A final, optional item is:
 |---|---|---|---|----|
 |Pogo Pins|2|https://www.aliexpress.us/item/3256805909678051.html|$2.62 for 10| Make sure the leg at the bottom is 0.8mm thick (or thinner), the overall height is at least 5mm, and the height when compressed is at most 4.5mm (assuming round hole sockets, heights may vary depending on your sockets). These are definitely optional, they are used for advanced socketing, but you can easily use a diode leg instead. Only recommended if you are using SMD diodes and don't have any spare wire.|
 
-With all of your parts, you can essentially just remove your RP2040-Zero from your PCB by wedging it out, and then follow the relevant parts of the [build guide](./build-guide/pcb.md).
+With all of your parts, you can essentially just remove your RP2040-Zero from your PCB by wedging it out, and then follow the relevant parts of the [build guide](./build-guide/pcb.md). **WARNING: Make sure you desolder the jumpers for the RP2040-Zero *before* you add the XIAO, and remember to solder the XIAO's jumpers on the other side.**
