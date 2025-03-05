@@ -17,7 +17,7 @@ First, you will need to choose whether you want to build your Apiaster with MX o
 Picking a switch can be an ordeal due to the sheer amount of choice. *You can always switch out switches within both of these types, but you will not be able to switch from one to the other.*
 
 ## MX
-For MX switches, [ThereminGoat](https://github.com/ThereminGoat/switch-scores) is well known for reviewing switches. If you don't have any experience with MX switches, my personal recommendation is to pick something cheap that is tactile with a weight of around 35-50g. 
+For MX switches, [ThereminGoat](https://github.com/ThereminGoat/switch-scores) is well known for reviewing switches. If you don't have any experience with MX switches, my personal recommendation is to pick something cheap that is tactile with a weight of around 35-50g. [kbd.news](https://kbd.news/) also has a [switch comparison tool](https://kbd.news/switch/MX-5-pins) which might come in helpful here.
 
 |![Outemu Silent Lemon](../images/ordering-guide/outemu-silent-lemon.png)| 
 |:--:| 
