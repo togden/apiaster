@@ -116,7 +116,7 @@ You'll then need to solder the BMS 1S battery protection circuit onto the *front
 
 |![BMS 1S](../../images/build-guide/19_bms_coin.jpg) |
 | :--: |
-| *I tried doing this with some electrical tape, and it did not work out for me, so I'm recommending crocodile clips or similar be used.* |
+| *I tried doing this with some electrical tape, and it did not work out for me, so I'm recommending crocodile clips or similar be used. Note that my silkscreen for the battery connector in this image is the wrong way around - B+ is the side closest to the coin cell. This was fixed in the published version.* |
 
 Turn the pcb over and feed solder into all the holes to form a good solid connection between PCB and BMS 1S. 
 
