@@ -6,7 +6,7 @@ The links chosen are mostly from Aliexpress to take advantage of shipping. Other
 
 ## PCB
 
-At the moment, the go-to for price for PCB manufacturing is JLCPCB. You will need to download this "gerber" file: [Click to navigate to file](../../pcb/apiaster-mx/production/Apiaster_V1.zip).
+At the moment, the go-to for price for PCB manufacturing is JLCPCB. You will need to download this "gerber" file: [Click to navigate to file](../../pcb/apiaster-choc/production/Apiaster_V1.zip).
 
 ![Download Gerber](../../images/ordering-guide/download-gerber.png)
 
@@ -27,8 +27,8 @@ Click on "Add Gerber File" and select the file you just downloaded (or drag and 
 |---|---|---|---|----|
 |1N4148 Diodes|70|https://www.aliexpress.com/item/4000142272546.html|$1.33 per 100|You can choose *either* these or the below ones, depending on what you prefer (these are easier for beginners).|
 |1N4148S Diodes|70|https://www.aliexpress.com/item/1005005707644429.html|$1.03 per 100|These result in a slightly shorter case. Pick SOD123, not SOD323.|
-|MX Switches|50|[Assuming previous section's Outemu](https://www.aliexpress.com/item/1005007140434837.html)|$11.56 for 70|As discussed previously.|
-|MX Keycaps|50|[Assuming previous section's cheap set](https://www.aliexpress.com/item/1005005386897424.html)|$3.42 for the set|As discussed previously.|
+|Choc Switches|50|[Assuming Choc V1 Pro Red](https://www.aliexpress.us/item/3256806440445666.html)|$29.05 for 70|As discussed previously.|
+|Choc Keycaps|50|[Assuming Tai-Hai Thins](https://www.aliexpress.us/item/3256807292421547.html)|$40.81 for the set|As discussed previously. Note that the linked set does not have 1.5u keycaps, nor do I know of any 1.5u *vertically oriented* choc V1 keycaps that you can obtain without 3d printing. Choc blanks or Choc V2 keycap sets are *much* cheaper, but Choc V2 switches are more expensive. I would pick Choc V2, personally.|
 |Hotswap Sockets|50|https://www.aliexpress.com/item/1005007232040760.html|$4.25 for 70| Make sure you're getting the shape suitable for Choc.|
 |XIAO nRF52840|1-3|[Singles](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) or  [3-pack](https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-3PCS-p-5921.html)|$9.90 each or $23.39 for 3.| As discussed previously. A "sense" version is also sold, but *entirely* unnecessary and just increases the price.|
 
