@@ -161,7 +161,7 @@ def make_frame(pcb_face, cut_face, args, left_side):
         if left_side:
             frame -= Pos(0, 0, PCB_THICKNESS + (args.mcu_socket_height if not args.smd_mcu else 0)) * mcu_location * \
             Rot(0, 0, parts['U1']['Rot']) * xiao.usb_c_cable_bot
-    if not args.block_usb:
+    if not args.no_usb_a:
         frame -=  Pos(parts['J1']['PosX'], parts['J1']['PosY']) * \
             Rot(0, 0, 180+parts['J1']['Rot']) * usb_socket.solder_gap
     if not args.no_usb_a and not args.block_usb:
@@ -206,7 +206,7 @@ def make_tray(pcb_face, args, left_side=True):
         WALL_HEIGHT_ABOVE_PCB = MX_PCB_SWITCH_SNAPON_DIST if args.low_case else MX_SWITCH_HEIGHT_ABOVE_PCB
     tray = Pos(0, 0, PCB_THICKNESS) * \
         extrude(pcb_face, amount=WALL_HEIGHT_ABOVE_PCB)
-    if not args.block_usb:
+    if not args.no_usb_a:
         tray -= Pos(parts['J1']['PosX'], parts['J1']['PosY'], PCB_THICKNESS) * Rot(
             0, 0, 180+parts['J1']['Rot']) * usb_socket.usb_a_cutout
         if not 'usb' in args.expose:
