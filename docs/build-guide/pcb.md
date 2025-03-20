@@ -62,6 +62,19 @@ Finally, use your wire cutters to clip the legs off all the diodes.
 
 There are a handful of jumpers that you need to solder. 5 on LSF, 5 on LSB, 10 on RSB. On each PCB there should be 5 near the MCU, 4 near the USB, and one near a switch under the MCU.
 
+**WARNING: If you solder the jumpers wrong, then this might damage your MCU when you plug it in. Please doublecheck that you are closing the right ones.**
+
+On the USB-A socket, close *all* the jumpers on the **opposite** side to the USB connector. This should be the **same** side as the diodes and hotswap sockets.
+
+There is a single jumper far under the MCU near a switch with the text "Solder LSB" or "Solder RSB". Solder these on the back sides as stated, the **same** side as the diodes, **opposite** side to the MCU.
+
+Finally, the 5 jumpers for the MCU just underneath it. On the PCB that you have designated as the right hand side, solder the jumpers on the **same** side as the diodes, just like all the other jumpers.
+
+However, on the left side, which side you solder depends on your MCU:
+
+* XIAO: Solder the jumpers on the **same** side as the diodes, just like all the other jumpers.
+* RP2040-Zero: Solder the jumpers on the **opposite** side as the diodes, the same side as the switches will be. These are the **only** jumpers which should be soldered on the front side. If you solder these jumpers, do not solder the corresponding jumpers on the back for the XIAO.
+
 |![Solder jumpers](../../images/build-guide/11_solder_jumpers.jpg) |
 | :--: |
 | *Essentially just a blob of solder connecting the two bits. Make sure you're heating both at the same time if you're struggling to get it to bridge. Add flux if it's not smooth.* |
