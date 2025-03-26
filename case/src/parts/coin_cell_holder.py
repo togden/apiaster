@@ -21,7 +21,7 @@ housing2 = Box(__HOUSING_DIMS[1]/2+2, 8, __HOUSING_DIMS[2], align=(Align.MAX, Al
 housing= offset(housing, .2, kind=Kind.INTERSECTION).split(Plane.XY)
 housing2= offset(housing2, .2, kind=Kind.INTERSECTION).split(Plane.XY)
 
-surface_points = [(-2,0),(-2, 4.6), (-.2, 7.6), (3.7+7.05-5.96, 7.6),   
+surface_points = [(-2,0),(-2, 4.6), (-0.6, 7.6), (3.7+7.05-5.96, 7.6),   
     (5.5, 4.6), (24-5.5, 4.6), (24-3, 5.6),(25, 5.6), (25,0)]
 shell_face = Pos(-13,-11) * Rot(90,0,0) * make_face(Polyline(surface_points).close())
 __housing_wave = extrude(shell_face, -22)
