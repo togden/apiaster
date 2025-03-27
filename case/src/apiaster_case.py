@@ -31,9 +31,9 @@ parts = get_parts(POSITION_FILE)
 main_svg = import_svg(SVG_FILE_MAIN)
 thumb_svg = import_svg(SVG_FILE_THUMBS)
 main_edges = Wire.combine(main_svg.edges(), tol=0.05).wires()[
-    0].clean().moved(Location((0, -get_svg_height(SVG_FILE_MAIN), 0))).order_edges()
+    0].clean().order_edges()
 thumb_wire = Wire.combine(thumb_svg.edges(), tol=0.05).wires()[
-    0].clean().moved(Location((0, -get_svg_height(SVG_FILE_THUMBS), 0)))
+    0].clean()
 thumb_origin = thumb_wire.order_edges()[-1].vertices()[1].to_tuple()
 
 thumb_part_ids = []
