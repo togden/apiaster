@@ -21,7 +21,7 @@ __hollow_points = [
 __hollow_face = Pos(13.51, -13) * make_face(Polyline(__hollow_points, close=True))
 __hollow_face= offset(fillet(__hollow_face.vertices().group_by(Axis.Y)[0][-1], 6.66),-2)
 hollow = extrude(__hollow_face, 5)
-
+shell = split(offset(hollow, 1), Plane.XY)
 
 if __name__ == '__main__':
     from ocp_vscode import *

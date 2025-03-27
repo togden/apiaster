@@ -252,17 +252,19 @@ def make_tray(pcb_face, args, left_side=True):
             tray += Pos(parts['BT1']['PosX'], parts['BT1']['PosY'],
                         PCB_THICKNESS) * Rot(0, 0, parts['BT1']['Rot']) * coin_cell_holder.shell
     elif args.battery == 'lipo':
-        tray -= Pos(parts['J2']['PosX'], parts['J2']['PosY'], PCB_THICKNESS) * \
-            Rot(0, 0, parts['J2']['Rot']) * jst.box
-        tray -= Pos(parts['BT1']['PosX'], parts['BT1']['PosY'],
-                    PCB_THICKNESS) * Rot(0, 0, parts['BT1']['Rot']) * jst.hollow
         if 'battery' in args.expose:
             tray -= Pos(parts['J2']['PosX'], parts['J2']['PosY'], PCB_THICKNESS) * \
                 Rot(0, 0, parts['J2']['Rot']) * extrude(
                     jst.box.faces().filter_by(Plane.XY)[-1], WALL_HEIGHT_ABOVE_PCB)
             tray -= Pos(parts['BT1']['PosX'], parts['BT1']['PosY'],
                         PCB_THICKNESS) * Rot(0, 0, parts['BT1']['Rot']) * extrude(jst.hollow.faces().filter_by(Plane.XY)[-1], WALL_HEIGHT_ABOVE_PCB)
-    
+        elif WALL_HEIGHT_ABOVE_PCB < 6:
+            tray += Pos(parts['BT1']['PosX'], parts['BT1']['PosY'],
+                    PCB_THICKNESS) * Rot(0, 0, parts['BT1']['Rot']) * jst.shell
+        tray -= Pos(parts['J2']['PosX'], parts['J2']['PosY'], PCB_THICKNESS) * \
+            Rot(0, 0, parts['J2']['Rot']) * jst.box
+        tray -= Pos(parts['BT1']['PosX'], parts['BT1']['PosY'],
+                    PCB_THICKNESS) * Rot(0, 0, parts['BT1']['Rot']) * jst.hollow
     if args.mcu == 'xiao':
         mcu_location = Pos(parts['U1']['PosX'], parts['U1']['PosY'])
         tray -= Pos(0, 0, PCB_THICKNESS + (args.mcu_socket_height if not args.smd_mcu else 0)) * mcu_location * \
