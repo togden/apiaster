@@ -52,8 +52,6 @@ Whichever switch type you choose will also need suitable keycaps. You should rea
 
 # Continue Here
 
-**Disclaimer: The MX version of the PCB has not yet been tested. I *expect* it to work. If this is too much risk for you, you can subscribe to [this issue](https://github.com/Nick-Munnich/apiaster/issues/1) to get a notification when the MX version has been tested.**
-
 [Click here to continue the guide with MX switches.](./mx-ordering-guide/mcu.md)
 
 [Click here to continue the guide with Choc switches.](./choc-ordering-guide/mcu.md)
