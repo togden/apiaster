@@ -1,6 +1,6 @@
 from build123d import *
 
-__INNER_D = 46
+__INNER_D = 44
 __OUTER_D = 56
 __PUCK_D = 42
 __PUCK_THICKNESS = 20
