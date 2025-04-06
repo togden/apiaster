@@ -48,4 +48,8 @@ Place the resulting PCB+Tray into the frame, then turn it over. Screw in the scr
 
 If you have the XIAO and 1.75mm diameter transparent filament, insert some into the other hole by the MCU and then cut it flush (my tool of choice is nail clippers). You can optionally secure it in place with a tiny drop of super glue or similar. 
 
-All done! Go flash your [firmware](https://github.com/Nick-Munnich/zmk-apiaster-module).
+All done! 
+
+I would like to request that you now take some images and share them, either publically somewhere or just as a GitHub issue. I'm preparing a gallery of Apiaster builds.
+
+You can now go flash your [firmware](https://github.com/Nick-Munnich/zmk-apiaster-module).
