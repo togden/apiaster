@@ -92,12 +92,16 @@ if 'right' in args.side:
 
 if args.export_stl:
     if 'left' in args.side:
-        print(f"Export success case/stl/apiaster-left-tray{args.name_suffix}.stl: {export_stl(left_tray, f"case/stl/apiaster-left-tray{args.name_suffix}.stl")}")
-        print(f"Export success case/stl/apiaster-left-frame{args.name_suffix}.stl: {export_stl(left_frame, f"case/stl/apiaster-left-frame{args.name_suffix}.stl")}")
+        left_tray_stl = export_stl(left_tray, f"case/stl/apiaster-left-tray{args.name_suffix}.stl")
+        left_frame_stl = export_stl(left_frame, f"case/stl/apiaster-left-frame{args.name_suffix}.stl")
+        print(f"Export success case/stl/apiaster-left-tray{args.name_suffix}.stl: {left_tray_stl}")
+        print(f"Export success case/stl/apiaster-left-frame{args.name_suffix}.stl: {left_frame_stl}")
 
     if 'right' in args.side:
-        print(f"Export success case/stl/apiaster-right-tray{args.name_suffix}.stl: {export_stl(right_tray, f"case/stl/apiaster-right-tray{args.name_suffix}.stl")}")
-        print(f"Export success case/stl/apiaster-right-frame{args.name_suffix}.stl: {export_stl(right_frame, f"case/stl/apiaster-right-frame{args.name_suffix}.stl")}")
+        right_tray_stl = export_stl(right_tray, f"case/stl/apiaster-right-tray{args.name_suffix}.stl")
+        right_frame_stl = export_stl(right_frame, f"case/stl/apiaster-right-frame{args.name_suffix}.stl")
+        print(f"Export success case/stl/apiaster-right-tray{args.name_suffix}.stl: {right_tray_stl}")
+        print(f"Export success case/stl/apiaster-right-frame{args.name_suffix}.stl: {right_frame_stl}")
 
 if not args.no_show:
     from ocp_vscode import *

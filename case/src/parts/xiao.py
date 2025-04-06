@@ -60,7 +60,8 @@ xiao_box -= xiao_skylights
 xiao_skylight_button = Pos(-6, -2, 2) * Rot(0,0,90) * extrude(SlotCenterToCenter(1, 1.6), 4.7)+\
         Pos(-6, -2.9, 2) * chamfer(extrude(Rectangle(2.6, 6), 2.8).edges().group_by(Axis.Z)[0], 1, 0.5)
 
-print(f"Export success case/stl/apiaster-xiao-button.stl: {export_stl(xiao_skylight_button, f"case/stl/apiaster-xiao-button.stl")}")
+xiao_button_stl = export_stl(xiao_skylight_button, "case/stl/apiaster-xiao-button.stl")
+print(f"Export success case/stl/apiaster-xiao-button.stl: {xiao_button_stl}")
 
 if __name__ == '__main__':
     from ocp_vscode import *
