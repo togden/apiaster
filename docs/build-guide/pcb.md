@@ -145,21 +145,21 @@ Take a moment to verify that everything is correct. If you have a multimeter, ta
 
 |![RP2040-Zero Verification](../../images/build-guide/multimeter-testing-zero.png) |
 | :--: |
-| *Infographic to help verify the connections for the **RP2040-Zero** setup.* |
+| *Infographic to help verify the connections for the **Choc RP2040-Zero** setup.* |
 
 |![XIAO nRF52840 Verification](../../images/build-guide/multimeter-testing-xiao.png) |
 | :--: |
-| *Infographic to help verify the connections for the **XIAO nRF52840** setup.* |
+| *Infographic to help verify the connections for the **Choc XIAO nRF52840** setup.* |
 
-MX:
+### MX:
 
 |![RP2040-Zero Verification](../../images/build-guide/multimeter_mx-zero.png) |
 | :--: |
-| *Infographic to help verify the connections for the **RP2040-Zero** setup.* |
+| *Infographic to help verify the connections for the **MX RP2040-Zero** setup.* |
 
 |![XIAO nRF52840 Verification](../../images/build-guide/multimeter_mx-xiao.png) |
 | :--: |
-| *Infographic to help verify the connections for the **XIAO nRF52840** setup.* |
+| *Infographic to help verify the connections for the **MX XIAO nRF52840** setup.* |
 
 
 Plug the USB A 3.0 cable into both halves, and turn it over so that the **back** is facing you. You can then probe continuity according to the above graphic for your choice of MCU - any connections with the same shape and color should have continuity. Probing the battery-related bits can be done using the markings on the PCB directly.
