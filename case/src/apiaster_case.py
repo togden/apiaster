@@ -4,7 +4,6 @@ from copy import deepcopy
 from build123d import *
 from src.parts import *
 from src.apiaster_case_config import *
-from ocp_vscode import *
 
 
 def get_svg_height(file):
