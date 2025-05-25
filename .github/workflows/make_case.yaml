@@ -34,7 +34,8 @@ on:
         type: string
         default: ''
 jobs:
-  Explore-GitHub-Actions:
+  Generate-Apiaster-Case:
+    name: Generate Apiaster Case
     runs-on: ubuntu-24.04
     steps:    
       - uses: actions/checkout@v2
