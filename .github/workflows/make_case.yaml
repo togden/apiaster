@@ -60,7 +60,7 @@ jobs:
           --tenting ${{ github.event.inputs['tenting'] }} \
           --expose ${{ github.event.inputs['expose'] }} \
           ${{ github.event.inputs['key-options'] }} \
-          --export-stl
+          --export-stl --no-show
     
       - name: Archive Apiaster Case STL files
         uses: actions/upload-artifact@v4
