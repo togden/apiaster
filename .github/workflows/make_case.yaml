@@ -8,18 +8,18 @@ on:
         default: ''
       switch-type:
         description: 'MX or Choc (V1 or V2). Allowed values: "mx", "choc".'
-        required: true
+        default: "mx"
         type: string
       mcu:
         description: 'MCU used. Allowed values: "xiao", "rp2040-zero", "either".'
-        required: true
+        default: "rp2040-zero"
         type: string
       mcu-socket-height:
         description: 'The height of the sockets in millimeters above the PCB. Default 4.7mm (round pin sockets).'
         default: "4.7"
       battery:
         description: 'Battery type used. Allowed values: "none", "coin", "lipo".'
-        required: true
+        default: "none"
         type: string
       tenting:
         description: 'Integrated tenting options. Allowed values: "none", "magsafe", "puck".'
