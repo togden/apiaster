@@ -53,7 +53,7 @@ jobs:
         run: |
           python case/make_case.py \
           ${{ github.event.inputs['booleans'] }} \
-          --switch-type ${{ github.event.inputs['switch-type'] }} \
+          --switch ${{ github.event.inputs['switch-type'] }} \
           --mcu ${{ github.event.inputs['mcu'] }} \
           --mcu-socket-height ${{ github.event.inputs['mcu-socket-height'] }} \
           --battery ${{ github.event.inputs['battery'] }} \
