@@ -1,0 +1,68 @@
+name: Make Case
+on: 
+  workflow_dispatch:
+    inputs:
+      configuration:
+        description: 'Combined boolean configuration options. --low-case, --smd-mcu, --no-usb-a, --block-usb, --smd-diodes, --remove-num-row.'
+        type: string
+        default: ''
+      switch-type:
+        description: 'MX or Choc (V1 or V2). Allowed values: "mx", "choc".'
+        required: true
+        type: string
+      mcu:
+        description: 'MCU used. Allowed values: "xiao", "rp2040-zero", "either".'
+        required: true
+        type: string
+      mcu-socket-height:
+        description: 'The height of the sockets in millimeters above the PCB. Default 4.7mm (round pin sockets).'
+        default: "4.7"
+      battery:
+        description: 'Battery type used. Allowed values: "none", "coin", "lipo".'
+        required: true
+        type: string
+      tenting:
+        description: 'Integrated tenting options. Allowed values: "none", "magsafe", "puck".'
+        default: "none"
+        type: string
+      expose:
+        description: "Select components which shouldn't be covered up by the tray. Allowed values: comma-separated list of 'mcu', 'battery', 'usb'."
+        default: ""
+        type: string
+      key-options:
+        description: 'Extra options for the keys. See documentation for details.'
+        type: string
+        default: ''
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-24.04
+    steps:    
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build123d=0.9.1
+
+      - name: Run Python command
+        run: |
+          python case/make_case.py \
+          ${{ github.event.inputs['booleans'] }} \
+          --switch-type ${{ github.event.inputs['switch-type'] }} \
+          --mcu ${{ github.event.inputs['mcu'] }} \
+          --mcu-socket-height ${{ github.event.inputs['mcu-socket-height'] }} \
+          --battery ${{ github.event.inputs['battery'] }} \
+          --tenting ${{ github.event.inputs['tenting'] }} \
+          --expose ${{ github.event.inputs['expose'] }} \
+          ${{ github.event.inputs['key-options'] }} \
+          --export-stl
+    
+      - name: Archive (${{ env.display_name }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: apiaster-case-stl
+          path: case/stl/
