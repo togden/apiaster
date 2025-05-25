@@ -66,7 +66,7 @@ jobs:
           --tenting ${{ github.event.inputs['tenting'] }} \
           --expose ${{ github.event.inputs['expose'] }} \
           --inner-index ${{ github.event.inputs['inner-index'] }} \
-          ${{ github.event.inputs['remove-num-row'] == "true" && '--remove-num-row' || '' }} \
+          ${{ github.event.inputs['remove-num-row'] == 'true' && '--remove-num-row' || '' }} \
           --thumb-type ${{ github.event.inputs['thumb-type'] }} \
           --thumb-adjustment ${{ github.event.inputs['thumb-adjustment'] }} \
           ${{ github.event.inputs['extra-options'] }} \
