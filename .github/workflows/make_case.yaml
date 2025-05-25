@@ -2,10 +2,6 @@ name: Make Case
 on: 
   workflow_dispatch:
     inputs:
-      configuration:
-        description: 'Combined boolean configuration options. --low-case, --smd-mcu, --no-usb-a, --block-usb, --smd-diodes, --remove-num-row.'
-        type: string
-        default: ''
       switch-type:
         description: 'MX or Choc (V1 or V2). Allowed values: "mx", "choc".'
         default: "mx"
@@ -25,12 +21,23 @@ on:
         description: 'Integrated tenting options. Allowed values: "none", "magsafe", "puck".'
         default: "none"
         type: string
-      expose:
-        description: "Select components which shouldn't be covered up by the tray. Allowed values: comma-separated list of 'mcu', 'battery', 'usb'."
-        default: ""
+      inner-index:
+        description: 'Adjust the number and position of the inner index keys for better comfort. Allowed values: "all", "reduced", "flex". Flex allows either configuration to be used.'
+        default: "all"
         type: string
-      key-options:
-        description: 'Extra options for the keys. See documentation for details.'
+      remove-num-row:
+        description: 'Removes the num row keys by covering them up with the tray.'
+        type: boolean
+        default: false
+      thumb-type:
+        description: 'Select what thumb cluster type should be used. Allowed values: "ripple", "all-1u", "classic", "flex". Classic is 1u-1u-1.5u. Flex allows for any of the three options, but may be less stable.'
+        default: "ripple"
+        type: string
+      thumb-adjustment:
+        description: 'Move the thumb cluster. Format: "x,y,r" where x is the number of mm that the cluster should be moved inwards, y is the number of mm that the cluster should be moved downwards, and r is the clockwise rotation in degrees around the outermost down-most corner of the cluster.'
+        default: "0,0,0"
+      extra-options:
+        description: 'Any additional options. See documentation for details.'
         type: string
         default: ''
 jobs:
@@ -52,14 +59,17 @@ jobs:
       - name: Run Python command
         run: |
           python case/make_case.py \
-          ${{ github.event.inputs['booleans'] }} \
           --switch ${{ github.event.inputs['switch-type'] }} \
           --mcu ${{ github.event.inputs['mcu'] }} \
           --mcu-socket-height ${{ github.event.inputs['mcu-socket-height'] }} \
           --battery ${{ github.event.inputs['battery'] }} \
           --tenting ${{ github.event.inputs['tenting'] }} \
           --expose ${{ github.event.inputs['expose'] }} \
-          ${{ github.event.inputs['key-options'] }} \
+          --inner-index ${{ github.event.inputs['inner-index'] }} \
+          ${{ github.event.inputs['remove-num-row'] && '--remove-num-row' || '' }} \
+          --thumb-type ${{ github.event.inputs['thumb-type'] }} \
+          --thumb-adjustment ${{ github.event.inputs['thumb-adjustment'] }} \
+          ${{ github.event.inputs['extra-options'] }} \
           --export-stl --no-show
     
       - name: Archive Apiaster Case STL files
