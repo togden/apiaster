@@ -14,7 +14,7 @@ export = parser.add_argument_group('Export Settings')
 display = parser.add_argument_group('Rendering Settings')
 base.add_argument('--side', choices=['left', 'right'],
                   help="Which sides of the keyboard to build the case for. Note that your halves may differ e.g. in the choice of MCU. Defaults to both.")
-base.add_argument('--export-stl', action="store_true",
+base.add_argument('--export-step', action="store_true",
                   help="Save case to file")
 base.add_argument('--no-show', action="store_true",
                   help="Render case using ocp_vscode")
@@ -67,7 +67,7 @@ display.add_argument('--switch-color', default='0x323232',
 display.add_argument('--keycap-color', default='0xF0F0F0',
                      help="Color to render the keycaps with, as a hex number. Default 0xF0F0F0")
 export.add_argument('--name-suffix', default="",
-                    help="Appended to the end of the filenames when exporting stls.")
+                    help="Appended to the end of the filenames when exporting steps.")
 
 args = parser.parse_args(sys.argv[1:])
 
@@ -82,7 +82,7 @@ assert not (args.battery == 'none' and args.mcu in [
             'xiao', 'either']), "Read the help message for battery selection."
 
 from src.apiaster_case import make_case, get_mcu, get_switches
-from build123d import export_stl, Pos, Rot, mirror, Plane
+from build123d import export_step, Pos, Rot, mirror, Plane
 
 if 'left' in args.side:
     left_tray, left_frame = make_case(args, left_side=True)
@@ -90,18 +90,18 @@ if 'left' in args.side:
 if 'right' in args.side:
     right_tray, right_frame = make_case(args, left_side=False)
 
-if args.export_stl:
+if args.export_step:
     if 'left' in args.side:
-        left_tray_stl = export_stl(left_tray, f"case/stl/apiaster-left-tray{args.name_suffix}.stl")
-        left_frame_stl = export_stl(left_frame, f"case/stl/apiaster-left-frame{args.name_suffix}.stl")
-        print(f"Export success case/stl/apiaster-left-tray{args.name_suffix}.stl: {left_tray_stl}")
-        print(f"Export success case/stl/apiaster-left-frame{args.name_suffix}.stl: {left_frame_stl}")
+        left_tray_step = export_step(left_tray, f"case/step/apiaster-left-tray{args.name_suffix}.step")
+        left_frame_step = export_step(left_frame, f"case/step/apiaster-left-frame{args.name_suffix}.step")
+        print(f"Export success case/step/apiaster-left-tray{args.name_suffix}.step: {left_tray_step}")
+        print(f"Export success case/step/apiaster-left-frame{args.name_suffix}.step: {left_frame_step}")
 
     if 'right' in args.side:
-        right_tray_stl = export_stl(right_tray, f"case/stl/apiaster-right-tray{args.name_suffix}.stl")
-        right_frame_stl = export_stl(right_frame, f"case/stl/apiaster-right-frame{args.name_suffix}.stl")
-        print(f"Export success case/stl/apiaster-right-tray{args.name_suffix}.stl: {right_tray_stl}")
-        print(f"Export success case/stl/apiaster-right-frame{args.name_suffix}.stl: {right_frame_stl}")
+        right_tray_step = export_step(right_tray, f"case/step/apiaster-right-tray{args.name_suffix}.step")
+        right_frame_step = export_step(right_frame, f"case/step/apiaster-right-frame{args.name_suffix}.step")
+        print(f"Export success case/step/apiaster-right-tray{args.name_suffix}.step: {right_tray_step}")
+        print(f"Export success case/step/apiaster-right-frame{args.name_suffix}.step: {right_frame_step}")
 
 if not args.no_show:
     from ocp_vscode import *
