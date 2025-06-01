@@ -70,7 +70,7 @@ jobs:
           --thumb-type ${{ github.event.inputs['thumb-type'] }} \
           --thumb-adjustment ${{ github.event.inputs['thumb-adjustment'] }} \
           ${{ github.event.inputs['extra-options'] }} \
-          --export-stl --no-show
+          --export-step --no-show
     
       - name: Archive Apiaster Case STL files
         uses: actions/upload-artifact@v4
